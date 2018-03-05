@@ -63,7 +63,7 @@ module Boilerpipe::SAX
       text.to_s.strip!
 
       #  add a single space if the block was only whitespace
-      if text.empty?
+      if text.to_s.empty?
         append_space
         @last_event = :WHITESPACE
         return
