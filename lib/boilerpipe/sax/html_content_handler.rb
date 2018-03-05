@@ -60,7 +60,7 @@ module Boilerpipe::SAX
       # trim whitespace
       started_with_whitespace = text  =~ /^\s/
       ended_with_whitespace = text  =~ /\s$/
-      text.strip!
+      text.to_s.strip!
 
       #  add a single space if the block was only whitespace
       if text.empty?
