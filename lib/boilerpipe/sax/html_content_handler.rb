@@ -55,7 +55,7 @@ module Boilerpipe::SAX
       return if text.empty?
 
       # replace all whitespace with simple space
-      text.encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '').gsub!(/\s+/, ' ')
+      text = text.encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '').gsub!(/\s+/, ' ')
 
       # trim whitespace
       started_with_whitespace = text  =~ /^\s/
